@@ -1,0 +1,23 @@
+#root {
+  margin: 10px;
+}
+
+input.text {
+  line-height: 1.42857143em;
+  padding: 2px 4px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+th.table--checkbox {
+  width: 10px;
+}
+
+th.table--type, th.table--priority {
+  width: 10%;
+}
+
+div.aui-progress-indicator {
+  width: 100%;
+}
+

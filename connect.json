@@ -1,0 +1,24 @@
+{
+  "key": "bitbucket-issues-batchify",
+  "name": "Bitbucket Issues Batchify",
+  "description": "Let's you edit your issues in batch",
+  "baseUrl": "https://bitbucket-batchify.appspot.com",
+  "modules": {
+    "repoPage": [{
+      "key": "cloud",
+      "name": {
+        "value": "Issues Batchify"
+      },
+      "url": "/cloud.html?repo_path={repo_path}",
+      "location": "org.bitbucket.repository.navigation",
+      "params": {
+        "auiIcon": "aui-iconfont-image"
+      }
+    }],
+    "oauthConsumer": {
+      "clientId": "5mYz2WsTkAPBay4HnX"
+    }
+  },
+  "scopes": ["repository", "issue:write"],
+  "contexts": ["personal"]
+}
