@@ -12,7 +12,7 @@
       "url": "/cloud.html?repo_path={repo_path}",
       "location": "org.bitbucket.repository.navigation",
       "params": {
-        "auiIcon": "aui-iconfont-image"
+        "auiIcon": "aui-iconfont-view-card"
       }
     }],
     "oauthConsumer": {
