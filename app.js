@@ -194,10 +194,12 @@ class EditPanel extends React.Component {
           <Toolbar style={{ minWidth: 150, }}>
             <Dropdown itemType="secondary" text="Priority" name="priority"
               items={['trivial', 'minor', 'major', 'critical', 'blocker']}
+              disabled={!this.props.store.anySelected}
               onClick={item => this.props.store.setPriority(item)}
              />
             <Dropdown itemType="secondary" text="Type" name="type"
               items={['bug', 'enhancement', 'proposal', 'task']}
+              disabled={!this.props.store.anySelected}
               onClick={item => this.props.store.setKind(item)}
              />
           </Toolbar>
@@ -226,7 +228,13 @@ class Dropdown extends React.Component {
     const id = `dropdown-${this.props.name}`;
     return (
       <div>
-        <a href={`#${id}`} aria-owns={id} aria-haspopup="true" className="aui-button aui-style-default aui-dropdown2-trigger">{this.props.text}</a>
+        <a href={`#${id}`} aria-owns={id}
+          aria-haspopup="true"
+          aria-disabled={this.props.disabled}
+          className="disabled aui-button aui-style-default aui-dropdown2-trigger"
+        >
+            {this.props.text}
+        </a>
         <div id={id} className="aui-style-default aui-dropdown2">
           <ul className="aui-list-truncate">
             {this.props.items.map(item => (
