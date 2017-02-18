@@ -1,6 +1,6 @@
 {
   "key": "bitbucket-issues-batchify",
-  "name": "Bitbucket Issues Batchify",
+  "name": "Issues Batchify for Bitbucket",
   "description": "Let's you edit your issues in batch",
   "baseUrl": "https://bitbucket-batchify.appspot.com",
   "modules": {
