@@ -30,6 +30,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       { from: 'cloud.html' },
+      { from: 'privacypolicy.htm' },
       { from: 'connect.json' },
     ]),
   ],
