@@ -125,37 +125,6 @@ class Row {
 
 var store = new Store();
 
-mobx.reaction(() => store.filterString, (filterString) => {
-  // console.log('reaction () => store.filterString', filterString);
-  // console.log(parse(filterString))
-});
-
-mobx.reaction(() => store.filteredRows, rows => {
-  // console.log('filtered: ', rows);
-});
-
-
-function listIssues(page=1) {
-  return bb.issues(page)
-    .then(data => {
-      const issues = data.values.map(i =>
-        new Row({
-          id: i.id,
-          title: i.title,
-          kind: i.kind,
-          priority: i.priority,
-        }));
-      store.rows = store.rows.concat(issues);
-      if (data.next) {
-        return listIssues(page + 1);
-      }
-    });
-}
-
-listIssues();
-bb.updateIssue(1, {
-  title: 'first bug - 1',
-});
 
 @mobxReact.observer
 class Progress extends React.Component {
